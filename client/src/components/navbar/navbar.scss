@@ -1,0 +1,117 @@
+.navbar {
+  width: 100%;
+  color: white;
+  font-size: 15px;
+  font-weight: 400;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  transition: all ease 0.5s;
+  &.top {
+    background: linear-gradient(to top, transparent 0%, rgb(0, 0, 0, 0.3) 50%);
+  }
+
+  &.show {
+    background-color: var(--main-color);
+  }
+
+  .container {
+    padding: 35px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      img {
+        height: 25px;
+        margin-right: 40px;
+      }
+      span {
+        cursor: pointer;
+        white-space: nowrap;
+      }
+    }
+    .right {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      img {
+        height: 35px;
+        width: 35px;
+        border-radius: 5px;
+        object-fit: cover;
+        cursor: pointer;
+      }
+      .icon {
+        font-size: 30px;
+        cursor: pointer;
+      }
+
+      span {
+        cursor: pointer;
+      }
+
+      .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        .profileIcon {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+        }
+
+        .iconDown {
+          font-size: 10px;
+          cursor: pointer;
+        }
+        .navigator {
+          display: none;
+        }
+        .options {
+          display: none;
+          span {
+            font-size: 12px;
+            white-space: nowrap;
+            padding: 5px 0px;
+            cursor: pointer;
+          }
+          hr {
+            font-size: 1px;
+          }
+        }
+
+        &:hover {
+          transition: 0.4s ease-in-out;
+
+          .navigator {
+            display: flex;
+            top: 80%;
+            position: absolute;
+            margin-right: 10px;
+          }
+
+          .options {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            right: 50px;
+            top: 100%;
+            background-color: var(--main-color);
+            opacity: 0.9;
+          }
+          .iconDown {
+            transform: rotate(180deg);
+            transition: 0.2s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}

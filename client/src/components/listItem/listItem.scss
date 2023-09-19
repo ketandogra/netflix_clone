@@ -1,0 +1,107 @@
+.listItem{
+
+    width: 250px;
+    height: 150px;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    overflow: hidden;
+    color: white;
+    cursor: pointer;
+
+   
+
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    video{
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &:hover{ 
+    width: 330px;
+    height:300px;
+    top: -75px;
+    position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+
+
+    
+    img{
+        height: 160px;
+    }
+
+    .itemInfo{
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        gap: 12px;
+
+        .icons{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size:40px;
+            .playButton{
+                width: 40px;
+                height: 40px;
+                background-color:whitesmoke;
+                border-radius: 50%;
+
+                .playIcon{
+                    font-size: 20px;
+                    margin-left: 5px;
+                    color: var(--main-color);
+                }
+        
+            }
+            .likeButton{
+                width: 40px;
+                height: 40px;
+                border: 2px solid whitesmoke;
+                border-radius: 50%;
+
+
+                .likeIcon{
+                    width: 25px;
+                }
+              
+            }
+            div{
+                display: flex;
+                align-items: baseline;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        .itemInfoTop{
+            color: lightgray;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            .limit{
+                border: 1px solid white;
+                padding:2px 5px;
+            }
+            .genre{
+                font-size: 14px;
+                color: lightgray;
+            }
+        }
+  
+
+        
+
+    }
+}
+
+}
